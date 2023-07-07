@@ -16,6 +16,10 @@ namespace Blog.API.Managers
         {
             _userRepository = userRepository;
         }
+        public async Task<List<User>> GetUsers()
+        {
+            return await _context.Users.ToListAsync();
+        }
 
 
         public async Task<UserModel> Create(CreateUserDto model)

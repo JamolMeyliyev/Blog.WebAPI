@@ -13,5 +13,8 @@
         public List<Comment>? Comments { get; set; }
         public List<Like>? Likes { get; set; }
         public int Views { get; set; }
+
+        public Guid BlogId { get; set; }
+        public Blog Blog { get; set; }
     }
 }
