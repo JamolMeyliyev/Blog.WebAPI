@@ -1,6 +1,9 @@
 ﻿using Blog.API.Managers;
 using Blog.API.Repositories.Interfaces;
 using Blog.API.Repositories;
+using Blog.API.Providers;
+using Blog.API.Context;
+using Microsoft.EntityFrameworkCore;
 
 namespace Blog.API.Extensions
 {
@@ -18,7 +21,6 @@ namespace Blog.API.Extensions
             services.AddHttpContextAccessor();
         }
 
-        /* dockerda ishlatish uchun kere boladi
         public static void MigrateIdentityDb(this WebApplication app)
         {
             if (app.Services.GetService<AppDbContext>() != null)
@@ -26,7 +28,7 @@ namespace Blog.API.Extensions
                 var identityDb = app.Services.GetRequiredService<AppDbContext>();
                 identityDb.Database.Migrate();
             }
-        }*/
+        }
 
     }
 }

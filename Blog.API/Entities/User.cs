@@ -10,7 +10,7 @@
         public required bool IsDeleted { get; set; }
         public DateTime UpdatedDate { get; set; } = DateTime.UtcNow;
         public DateTime CreatedDate { get; set; } = DateTime.UtcNow;
-        public List<Post>? Posts { get; set; }
+        public List<Blog>? Blogs { get; set; }
         public List<SaveMessage>? Saves { get; set; }
     }
 }
